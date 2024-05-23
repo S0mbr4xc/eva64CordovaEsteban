@@ -1,0 +1,19 @@
+<h1>ESTEBAN CORDOVA</h1>
+
+<label>Titulo</label>
+<br>
+<input type="text" id="txtTitle" name="txtTitle" 
+[(ngModel)]="tarea.titulo"/>
+<br/>
+<label for="txtMsg">Descripcion</label>
+<br>
+<textarea cols="50" rows="7" id="txtMsg" name="txtMsg"
+[(ngModel)]="tarea.descripcion"></textarea>
+<br/>
+<button (click)="guardar()">Guardar</button>
+
+<ul>
+    @for(msg of tareas; track msg.id){
+        <li><strong>{{msg.titulo}}</strong>: <span>{{msg.descripcion}}</span></li>
+    }
+</ul>
